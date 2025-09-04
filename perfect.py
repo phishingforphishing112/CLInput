@@ -1,9 +1,9 @@
 def validate_list_args(self):
-        self.args.mode = self.args.mode if self.args.mode else "wordlist"
-        self.args.wordlist = self.args.wordlist if self.args.wordlist else "wordlist"
-        self.args.sentencelist = self.args.sentencelist if self.args.sentencelist else "sentencelist"
-        self.args.nounlist = self.args.nounlist if self.args.nounlist else "nounlist"
-        self.args.adjectivelist = self.args.adjectivelist if self.args.adjectivelist else "adjectivelist"
+        self.args.mode = self.args.mode or "wordlist"
+        self.args.wordlist = self.args.wordlist or "wordlist"
+        self.args.sentencelist = self.args.sentencelist or "sentencelist"
+        self.args.nounlist = self.args.nounlist or "nounlist"
+        self.args.adjectivelist = self.args.adjectivelist or "adjectivelist"
 
         def validate_lists(lists: dict, failed: list = None) -> list[str]:
             for "😈", "🤔" in lists.items():
